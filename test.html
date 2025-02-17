@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return to Game</title>
+    <script>
+        function openGame() {
+            var gameUrl = "com.gameplaygalaxy.txdev://launch";
+            var fallbackUrl = "https://play.google.com/store/apps/details?id=com.gameplaygalaxy.txd";
+            
+            // Try opening the app
+            window.location.href = gameUrl;
+            
+            // Fallback to store if not installed
+            setTimeout(function() {
+                window.location.href = fallbackUrl;
+            }, 2000); // Adjust timeout as needed
+        }
+    </script>
+</head>
+<body>
+    <button onclick="openGame()" style="font-size: 20px; padding: 10px;">Return to Game</button>
+</body>
+</html>
